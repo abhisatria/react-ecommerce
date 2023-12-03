@@ -1,44 +1,41 @@
-import React, { Component, Fragment } from 'react'
-import FooterDesktop from '../components/common/FooterDesktop'
-import FooterMobile from '../components/common/FooterMobile'
-import NavMenuDesktop from '../components/common/NavMenuDesktop'
-import NavMenuMobile from '../components/common/NavMenuMobile'
-import UserLogin from '../components/common/UserLogin'
-
+import React, { Component, Fragment } from "react";
+import FooterDesktop from "../components/common/FooterDesktop";
+import FooterMobile from "../components/common/FooterMobile";
+import NavMenuDesktop from "../components/common/NavMenuDesktop";
+import NavMenuMobile from "../components/common/NavMenuMobile";
+import UserLogin from "../components/common/UserLogin";
 
 class UserLoginPage extends Component {
-     componentDidMount(){
-          window.scroll(0,0)
-     }
-     
-     render() {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
 
-          const setUser = this.props.setUser;
-          const user = this.props.user;
-          
-          return (
-               <Fragment> 
-               <div className="Desktop">
-                <NavMenuDesktop /> 
-               </div>
+  render() {
+    const setUser = this.props.setUser;
+    const user = this.props.user;
 
-               <div className="Mobile">
-               <NavMenuMobile />  
-               </div>                       
+    return (
+      <Fragment>
+        <div className="Desktop">
+          <NavMenuDesktop />
+        </div>
 
-               <UserLogin setUser={setUser} user ={user} /> 
-               
-               <div className="Desktop">
-               <FooterDesktop/>
-               </div>
+        <div className="Mobile">
+          <NavMenuMobile />
+        </div>
 
-               <div className="Mobile">
-               <FooterMobile/>
-               </div>
-               
-          </Fragment>
-          )
-     }
+        <UserLogin setUser={setUser} user={user} />
+
+        <div className="Desktop">
+          <FooterDesktop />
+        </div>
+
+        <div className="Mobile">
+          <FooterMobile />
+        </div>
+      </Fragment>
+    );
+  }
 }
 
-export default UserLoginPage
+export default UserLoginPage;
